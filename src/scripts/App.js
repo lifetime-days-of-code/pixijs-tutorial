@@ -1,5 +1,6 @@
 import * as PIXI from 'pixi.js';
 import Loader from './Loader';
+import { MainScene } from './MainScene';
 
 export class App {
   run() {
@@ -11,6 +12,8 @@ export class App {
   }
 
   start() {
-    console.log('the game started');
+    this.scene = new MainScene();
+    this.app.stage.addChild(this.scene.container);
+
   }
 }
